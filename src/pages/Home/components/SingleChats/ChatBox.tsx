@@ -34,7 +34,7 @@ const ChatBox = () => {
             }  h-max px-5 py-2 max-w-[60%] w-auto justify-between flex rounded-2xl flex-col items-start`}
           >
             <h1 className="w-full">{item?.message}</h1>
-            <p className="text-xs min-w-max flex w-full  justify-end gap-2 items-end text-[#629e61]">
+            <p className="text-xs min-w-max flex w-full  justify-end gap-2 items-end text-[#629e61] dark:text-gray-50">
               {format(new Date(item?.created_at), "p")}
               <Check className="!text-sm" />
             </p>

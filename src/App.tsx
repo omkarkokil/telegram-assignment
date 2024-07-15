@@ -4,7 +4,7 @@ import HomePage from "./pages/Home/page";
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-tg-background">
+      <div>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/chats/:id" element={<HomePage />} />
