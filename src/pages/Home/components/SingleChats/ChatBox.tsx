@@ -1,6 +1,7 @@
 import { Check } from "@mui/icons-material";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { format } from "date-fns";
 import { useParams } from "react-router-dom";
 
 const ChatBox = () => {
@@ -20,13 +21,22 @@ const ChatBox = () => {
 
   console.log(`🚀 ~ chats:`, chats);
   return (
-    <aside className="w-full h-auto flex flex-col items-end justify-end">
-      {chats?.data?.map((item: any) => (
-        <div className="w-full items-end  flex justify-end">
-          <div className="bg-[#eeffde] justify-between items-end flex gap-2 rounded-full p-1 ">
-            <h1>hey there</h1>
-            <p className="text-xs flex justify-end gap-2 items-end text-[#629e61]">
-              5:30 AM <Check className="!text-sm" />
+    <aside className="w-full h-auto flex flex-col gap-3 items-end justify-end">
+      {chats?.data?.map((item: any, id: number) => (
+        <div
+          className={`w-full items-end  flex ${
+            id % 2 !== 0 ? "justify-start" : "justify-end"
+          } `}
+        >
+          <div
+            className={`${
+              id % 2 !== 0 ? "bg-white" : "bg-[#eeffde]"
+            }   gap-2 h-max max-w-[60%] w-auto justify-between items-end flex rounded-2xl p-1  `}
+          >
+            <h1 className="w-[80%]">{item?.message}</h1>
+            <p className="text-xs min-w-max flex justify-end gap-2 items-end text-[#629e61]">
+              {format(new Date(item?.created_at), "p")}
+              <Check className="!text-sm" />
             </p>
           </div>
         </div>
