@@ -12,8 +12,12 @@ import ChatBox from "./components/SingleChats/ChatBox";
 
 const SingleChats = () => {
   const navigate = useNavigate();
+
   return (
-    <section className="flex items-center w-full justify-center background-chat-container dark:dark-container">
+    <section
+      className={`flex items-center w-full justify-center background-chat-container dark:dark-container
+      `}
+    >
       {/* Navigation */}
       <nav className="fixed dark:bg-[#212121] bg-white w-full top-0 shadow-md py-2 px-4">
         <div className="flex items-center justify-between w-full ">
@@ -48,7 +52,7 @@ const SingleChats = () => {
 
           {/* Comment Box */}
 
-          <div className="fixed  left-[20%] right-[20%] bottom-6">
+          <div className="fixed  left-[10%] md:left-[20%]  right-[10%] md:right-[20%] bottom-6">
             <div className="flex w-full gap-2 items-center">
               <div className="flex w-full items-center justify-between bg-white p-4 rounded-xl">
                 {/* Emoji */}
