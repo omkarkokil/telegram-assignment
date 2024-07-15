@@ -6,6 +6,7 @@ function App() {
       <div className="bg-tg-background">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/chats/:id" element={<HomePage />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -15,7 +15,7 @@ const SingleChats = () => {
       <nav className="fixed bg-white w-full top-0 shadow-md py-2 px-8 ">
         <div className="flex items-center justify-between w-full ">
           {/* left side */}
-          <div className="flex items-center gap-2 justify-center ">
+          <div className="flex items-center gap-1 justify-center ">
             <Avatar sx={{ height: 45, width: 45 }} />
             <div className="">
               <h1 className="tracking-tight text-lg !leading-none   font-semibold">

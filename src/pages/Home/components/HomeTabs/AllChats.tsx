@@ -1,9 +1,13 @@
 import { Avatar } from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const AllChats = () => {
+  // get current page path
+  const { id } = useParams();
+  console.log(`🚀 ~ id:`, id);
+
   async function getAllChats() {
     const response = await axios.get(
       "https://devapi.beyondchats.com/api/get_all_chats?page=1"
@@ -16,17 +20,20 @@ const AllChats = () => {
     queryKey: ["allChats"],
     queryFn: getAllChats,
   });
-  console.log(`🚀 ~ chats:`, chats?.data);
 
   return (
     <article className="overflow-y-auto mb-2 h-[85vh]">
       {chats?.data?.data?.map((item: any) => (
         <div className="p-2">
           <Link
-            className="flex items-center p-2 rounded-xl justify-between hover:bg-gray-200 cursor-pointer"
-            to={"/"}
+            className={`flex items-center gap-2 p-2 rounded-xl justify-between hover:bg-gray-200 cursor-pointer ${
+              item.id === Number(id)
+                ? "!bg-blue-500 text-white"
+                : "bg-transparent"
+            }`}
+            to={"/chats/" + item.id}
           >
-            <div className="w-[20%]">
+            <div className="w-max">
               <Avatar sx={{ height: 50, width: 50 }} src="" />
             </div>
             <div className="w-[70%]">
