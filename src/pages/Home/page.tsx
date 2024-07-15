@@ -1,11 +1,13 @@
 import { Menu, Search } from "@mui/icons-material";
 import ToggleButton from "../../components/custom/ToggleButton";
 import TabsComponent from "./components/HomeTabs/Tabs";
+import { DropdownMenuCheckboxes } from "./DropDown/page";
 import SingleChats from "./singlechat";
 
 const HomePage = () => {
   return (
     <section className="h-screen dark:bg-[#212121] dark:text-white   fixed bottom-0 top-0 left-0 right-0 w-full flex ">
+      <DropdownMenuCheckboxes />
       <aside className="w-full lg:w-[25%] h-full border-r">
         {/* App bar & drawer */}
         <nav className=" flex gap-4 items-center p-3 px-4  w-full">
