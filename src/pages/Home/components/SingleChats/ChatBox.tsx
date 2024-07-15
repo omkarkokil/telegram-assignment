@@ -24,7 +24,7 @@ const ChatBox = () => {
       {chats?.data?.map((item: any, id: number) => (
         <div
           key={id}
-          className={`w-full items-end flex ${
+          className={`w-full   items-end flex ${
             id % 2 !== 0 ? "justify-start" : "justify-end"
           } `}
         >
@@ -33,16 +33,18 @@ const ChatBox = () => {
               id % 2 !== 0
                 ? "bg-white dark:bg-[#212121] text-[#7f6dd2]"
                 : "bg-[#eeffde] dark:bg-[#766ac8]"
-            }  h-max px-5 py-2 max-w-[60%] w-auto justify-between flex rounded-2xl flex-col items-start`}
+            } h-max px-5 py-2 max-w-[60%] w-auto justify-between flex rounded-2xl flex-col items-start user-message`}
           >
             <h1 className="w-full">{item?.message}</h1>
             <p
-              className={`text-xs min-w-max flex w-full justify-end gap-2 items-end text-[#629e61] ${
-                id % 2 !== 0 ? "dark:text-gray-400" : "dark:text-white"
+              className={`text-xs min-w-max flex w-full  justify-end gap-2 items-end text-[#629e61] ${
+                id % 2 !== 0
+                  ? "dark:text-neutral-600 font-semibold"
+                  : "dark:text-white"
               }`}
             >
               {format(new Date(item?.created_at), "p")}
-              <Check className="!text-sm" />
+              {id % 2 === 0 && <Check className="!text-sm" />}
             </p>
             <div
               className={`absolute bottom-0 ${

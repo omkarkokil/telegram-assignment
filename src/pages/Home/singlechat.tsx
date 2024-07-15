@@ -7,6 +7,7 @@ import {
   SentimentSatisfiedAlt,
 } from "@mui/icons-material";
 import { Avatar, IconButton } from "@mui/material";
+import { Phone } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "../../context/ThemeProvider";
 import ChatBox from "./components/SingleChats/ChatBox";
@@ -41,6 +42,7 @@ const SingleChats = () => {
 
           <div className="flex gap-4">
             <Search className="text-gray-500 !text-[26px]" />
+            <Phone className="text-gray-500 !text-[26px]" />
             <MoreVert className="text-gray-500 !text-[26px]" />
           </div>
           {/* Right Side */}
