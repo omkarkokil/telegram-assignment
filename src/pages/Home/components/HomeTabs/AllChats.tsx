@@ -1,10 +1,16 @@
 import { Avatar } from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 import { Link } from "react-router-dom";
-import useApi from "../../hooks/useApi";
 
 const AllChats = () => {
-  const { getAllChats } = useApi();
+  async function getAllChats() {
+    const response = await axios.get(
+      "https://devapi.beyondchats.com/api/get_all_chats?page=1"
+    );
+
+    return response.data;
+  }
 
   const { data: chats } = useQuery({
     queryKey: ["allChats"],
