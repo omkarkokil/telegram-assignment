@@ -84,7 +84,7 @@
   position: relative;
   height: 100vh;
   backdrop-filter: blur(10px);
-  background: linear-gradient(#18181aa2, #18181a8a);
+  background: linear-gradient(#0f0f0f, #0f0f0f);
 }
 
 .dark-container::before {
@@ -94,8 +94,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(#18181aa2, #18181a8a),
+  background: linear-gradient(#00000061, #00000061),
     url(./assets/pattern-5.svg) repeat center/contain;
   opacity: 0.2; /* Adjust the opacity as needed */
   z-index: -1;
+  filter: invert(1);
 }

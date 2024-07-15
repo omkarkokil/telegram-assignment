@@ -8,14 +8,18 @@ import {
 } from "@mui/icons-material";
 import { Avatar, IconButton } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useTheme } from "../../context/ThemeProvider";
 import ChatBox from "./components/SingleChats/ChatBox";
 
 const SingleChats = () => {
   const navigate = useNavigate();
+  const { theme } = useTheme();
 
   return (
     <section
-      className={`flex items-center w-full justify-center background-chat-container dark:dark-container
+      className={`flex items-center w-full justify-center ${
+        theme === "dark" ? "dark-container" : "background-chat-container"
+      }
       `}
     >
       {/* Navigation */}
