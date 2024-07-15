@@ -1,6 +1,7 @@
-import { Menu, Search } from "@mui/icons-material";
+import { Search } from "@mui/icons-material";
 import ToggleButton from "../../components/custom/ToggleButton";
 import TabsComponent from "./components/HomeTabs/Tabs";
+import { DropdownMenuCheckboxes } from "./DropDown/page";
 import SingleChats from "./singlechat";
 
 const HomePage = () => {
@@ -10,7 +11,8 @@ const HomePage = () => {
         {/* App bar & drawer */}
         <nav className=" flex gap-4 items-center p-3 px-4  w-full">
           <div className="flex gap-6 items-center">
-            <Menu />
+            <DropdownMenuCheckboxes />
+
             <ToggleButton />
             {/* <h1 className="text-xl leading-0">Telegram</h1> */}
           </div>
