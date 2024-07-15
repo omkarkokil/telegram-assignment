@@ -3,8 +3,6 @@ import TabsComponent from "./components/HomeTabs/Tabs";
 import SingleChats from "./singlechat";
 
 const HomePage = () => {
-  // Get all chats
-
   return (
     <section className="h-screen fixed bottom-0 top-0 left-0 right-0 w-full flex ">
       <aside className="w-[25%] h-full border-r">
