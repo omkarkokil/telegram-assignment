@@ -19,6 +19,7 @@ const HomePage = () => {
             <Search className="mt-1" />
             <input
               type="text"
+              placeholder="Search"
               className="bg-gray-100 border-none outline-none"
             />
           </div>
