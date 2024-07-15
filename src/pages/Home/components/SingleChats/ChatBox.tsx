@@ -30,7 +30,7 @@ const ChatBox = () => {
         >
           <div
             className={`${
-              id % 2 !== 0 ? "bg-white" : "bg-[#eeffde]"
+              id % 2 !== 0 ? "bg-white" : "bg-[#eeffde] dark:bg-[#766ac8]"
             }  h-max px-5 py-2 max-w-[60%] w-auto justify-between flex rounded-2xl flex-col items-start`}
           >
             <h1 className="w-full">{item?.message}</h1>
