@@ -13,9 +13,9 @@ import ChatBox from "./components/SingleChats/ChatBox";
 const SingleChats = () => {
   const navigate = useNavigate();
   return (
-    <section className="flex items-center w-full justify-center background-chat-container">
+    <section className="flex items-center w-full justify-center background-chat-container dark:dark-container">
       {/* Navigation */}
-      <nav className="fixed bg-white w-full top-0 shadow-md py-2 px-4">
+      <nav className="fixed dark:bg-[#212121] bg-white w-full top-0 shadow-md py-2 px-4">
         <div className="flex items-center justify-between w-full ">
           <div className="flex items-center gap-1 justify-center ">
             <IconButton onClick={() => navigate(-1)}>
