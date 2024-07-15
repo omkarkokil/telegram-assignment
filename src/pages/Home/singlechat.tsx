@@ -26,9 +26,12 @@ const SingleChats = () => {
       {/* Navigation */}
       <nav className="fixed dark:bg-[#212121] bg-white w-full top-0 shadow-md py-2 px-4">
         <div className="flex items-center justify-between w-full ">
-          <div className="flex items-center gap-1 justify-center ">
-            <IconButton onClick={() => navigate(-1)}>
-              <ArrowBack className="text-gray-500 !text-[26px]" />
+          <div className="flex items-center md:mx-2 gap-1 justify-center ">
+            <IconButton
+              className="md:!hidden !block"
+              onClick={() => navigate(-1)}
+            >
+              <ArrowBack className="text-gray-500  !text-[26px]" />
             </IconButton>
             <Avatar sx={{ height: 45, width: 45 }} />
             <div className="">

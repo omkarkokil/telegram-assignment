@@ -1,13 +1,17 @@
 import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu";
 import * as React from "react";
 
-import { Menu } from "@mui/icons-material";
+import {
+  BookmarkAddOutlined,
+  Menu,
+  PersonOutline,
+  PlayArrowOutlined,
+} from "@mui/icons-material";
 import {
   DropdownMenu,
-  DropdownMenuCheckboxItem,
   DropdownMenuContent,
+  DropdownMenuGroup,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "../../../components/ui/dropdown-menu";
 
@@ -20,31 +24,33 @@ export function DropdownMenuCheckboxes() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+      <DropdownMenuTrigger className="cursor-pointer" asChild>
         <Menu />
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>Appearance</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuCheckboxItem
-          checked={showStatusBar}
-          onCheckedChange={setShowStatusBar}
-        >
-          Status Bar
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem
-          checked={showActivityBar}
-          onCheckedChange={setShowActivityBar}
-          disabled
-        >
-          Activity Bar
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem
-          checked={showPanel}
-          onCheckedChange={setShowPanel}
-        >
-          Panel
-        </DropdownMenuCheckboxItem>
+      <DropdownMenuContent
+        className="w-56 bg-white/70 !rounded-lg" // Adjust the opacity as needed
+        style={{
+          backdropFilter: "blur(10px)",
+          position: "absolute", // Ensure it's positioned absolutely within its relative parent
+          left: 0,
+          border: "1px solid rgba(255, 255, 255, 0.18)",
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        }}
+      >
+        <DropdownMenuGroup className="rounded-lg space-y-1">
+          <DropdownMenuLabel className="flex gap-4">
+            <BookmarkAddOutlined />
+            Saved Message
+          </DropdownMenuLabel>
+          <DropdownMenuLabel className="flex gap-4">
+            <PersonOutline />
+            Contacts
+          </DropdownMenuLabel>
+          <DropdownMenuLabel className="flex gap-4">
+            <PlayArrowOutlined />
+            My Stories
+          </DropdownMenuLabel>
+        </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
   );

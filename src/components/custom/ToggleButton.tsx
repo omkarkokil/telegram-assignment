@@ -16,13 +16,13 @@ const ToggleButton = () => {
             ref.current?.classList.add(
               "!scale-[150]",
               "!bg-white",
-              "!opacity-[0.7]"
+              "!opacity-[0.2]"
             );
           } else {
             ref.current?.classList.add(
               "!scale-[150]",
               "!bg-black",
-              "!opacity-[0.7]"
+              "!opacity-[0.2]"
             );
           }
           setTimeout(() => {
@@ -31,7 +31,7 @@ const ToggleButton = () => {
               "!scale-[150]",
               "!bg-white",
               "!bg-black",
-              "!opacity-[0.7]"
+              "!opacity-[0.2]"
             );
           }, 1000);
         }}
