@@ -17,12 +17,12 @@ const HomePage = () => {
             {/* <h1 className="text-xl leading-0">Telegram</h1> */}
           </div>
 
-          <div className="rounded-full dark:bg-black bg-gray-100 w-full p-2 flex gap-2">
+          <div className="rounded-full input-box dark:bg-[#2c2c2c] bg-gray-100 w-full p-2 flex gap-2">
             <Search className="mt-1" />
             <input
               type="text"
               placeholder="Search"
-              className="bg-gray-100 border-none outline-none"
+              className="bg-gray-100 dark:bg-[#2c2c2c] border-none outline-none"
             />
           </div>
         </nav>
