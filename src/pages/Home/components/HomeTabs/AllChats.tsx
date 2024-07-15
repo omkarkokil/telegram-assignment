@@ -46,7 +46,9 @@ const AllChats = () => {
               </h1>
               <p className="text-[15px]  truncate">{item?.creator?.email}</p>
             </div>
-            <h1 className="w-[10%]">83</h1>
+            <h1 className="w-6 h-6 text-xs bg-green-600 rounded-full flex justify-center items-center text-white ">
+              83
+            </h1>
           </Link>
         </div>
       ))}

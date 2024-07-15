@@ -23,17 +23,17 @@ const ChatBox = () => {
     <aside className="w-full h-auto flex flex-col gap-3 items-end justify-end">
       {chats?.data?.map((item: any, id: number) => (
         <div
-          className={`w-full items-end  flex ${
+          className={`w-full items-end flex ${
             id % 2 !== 0 ? "justify-start" : "justify-end"
           } `}
         >
           <div
             className={`${
               id % 2 !== 0 ? "bg-white" : "bg-[#eeffde]"
-            }   gap-2 h-max max-w-[60%] w-auto justify-between items-end flex rounded-2xl p-1  `}
+            }  h-max px-5 py-2 max-w-[60%] w-auto justify-between flex rounded-2xl flex-col items-start`}
           >
-            <h1 className="w-[80%]">{item?.message}</h1>
-            <p className="text-xs min-w-max flex justify-end gap-2 items-end text-[#629e61]">
+            <h1 className="w-full">{item?.message}</h1>
+            <p className="text-xs min-w-max flex w-full  justify-end gap-2 items-end text-[#629e61]">
               {format(new Date(item?.created_at), "p")}
               <Check className="!text-sm" />
             </p>
