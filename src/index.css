@@ -87,6 +87,19 @@
   background: linear-gradient(#0f0f0f, #0f0f0f);
 }
 
+.user-message::before {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust based on your needs */
+  right: 20px; /* Adjust based on your needs */
+  width: 0;
+  height: 0;
+  background: #fff;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid inherit;
+}
+
 .dark-container::before {
   content: "";
   position: absolute;
@@ -94,9 +107,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(#00000061, #00000061),
+  background: linear-gradient(#00000000, #00000000),
     url(./assets/pattern-5.svg) repeat center/contain;
-  opacity: 0.2; /* Adjust the opacity as needed */
+  opacity: 0.1; /* Adjust the opacity as needed */
   z-index: -1;
   filter: invert(1);
 }
