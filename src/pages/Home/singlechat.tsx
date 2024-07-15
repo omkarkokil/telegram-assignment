@@ -8,13 +8,14 @@ import {
 } from "@mui/icons-material";
 import { Avatar, IconButton } from "@mui/material";
 import { Phone } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useTheme } from "../../context/ThemeProvider";
 import ChatBox from "./components/SingleChats/ChatBox";
 
 const SingleChats = () => {
   const navigate = useNavigate();
   const { theme } = useTheme();
+  const location = useLocation();
 
   return (
     <section
@@ -24,7 +25,11 @@ const SingleChats = () => {
       `}
     >
       {/* Navigation */}
-      <nav className="fixed dark:bg-[#212121] bg-white w-full top-0 shadow-md py-2 px-4">
+      <nav
+        className={` ${
+          !location.pathname.includes("/chats") && "!hidden"
+        } fixed dark:bg-[#212121] bg-white w-full top-0 shadow-md py-2 px-4`}
+      >
         <div className="flex items-center justify-between w-full ">
           <div className="flex items-center md:mx-2 gap-1 justify-center ">
             <IconButton
@@ -61,7 +66,11 @@ const SingleChats = () => {
 
           {/* Comment Box */}
 
-          <div className="fixed  left-[10%] md:left-[20%]  right-[10%] md:right-[20%] bottom-6">
+          <div
+            className={`fixed   left-[10%] md:left-[20%]  right-[10%] md:right-[20%] bottom-6
+            ${!location.pathname.includes("/chats") && "!hidden"}
+            `}
+          >
             <div className="flex w-full gap-2 items-center">
               <div className="flex w-full items-center justify-between bg-white p-4 rounded-xl">
                 {/* Emoji */}
