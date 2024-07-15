@@ -1,6 +1,3 @@
-import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu";
-import * as React from "react";
-
 import {
   BookmarkAddOutlined,
   Menu,
@@ -15,13 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "../../../components/ui/dropdown-menu";
 
-type Checked = DropdownMenuCheckboxItemProps["checked"];
-
 export function DropdownMenuCheckboxes() {
-  const [showStatusBar, setShowStatusBar] = React.useState<Checked>(true);
-  const [showActivityBar, setShowActivityBar] = React.useState<Checked>(false);
-  const [showPanel, setShowPanel] = React.useState<Checked>(false);
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="cursor-pointer" asChild>
