@@ -26,9 +26,9 @@ const AllChats = () => {
       {chats?.data?.data?.map((item: any) => (
         <div className="p-2">
           <Link
-            className={`flex items-center gap-2 p-2 rounded-xl justify-between hover:bg-gray-200 cursor-pointer ${
+            className={`flex items-center gap-2 p-2 rounded-xl justify-between hover:bg-gray-200 dark:hover:bg-neutral-700 cursor-pointer ${
               item.id === Number(id)
-                ? "!bg-blue-500 text-white"
+                ? "!bg-blue-500 text-white dark:!bg-[#766ac8]"
                 : "bg-transparent"
             }`}
             to={
