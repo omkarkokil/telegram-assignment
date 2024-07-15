@@ -42,7 +42,7 @@ const SingleChats = () => {
       <article className="overflow-y-auto w-full  mb-2 h-[75vh]">
         <aside className=" flex w-full justify-center ">
           {/* Chat Box */}
-          <div className="flex w-[60%] items-center justify-center">
+          <div className="flex px-4 lg:w-[60%] w-full items-center justify-center">
             <ChatBox />
           </div>
 
