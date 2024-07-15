@@ -29,7 +29,7 @@ const ChatBox = () => {
           } `}
         >
           <div
-            className={`${
+            className={`relative ${
               id % 2 !== 0
                 ? "bg-white dark:bg-[#212121] text-[#7f6dd2]"
                 : "bg-[#eeffde] dark:bg-[#766ac8]"
@@ -37,13 +37,26 @@ const ChatBox = () => {
           >
             <h1 className="w-full">{item?.message}</h1>
             <p
-              className={`text-xs min-w-max flex w-full  justify-end gap-2 items-end text-[#629e61] ${
+              className={`text-xs min-w-max flex w-full justify-end gap-2 items-end text-[#629e61] ${
                 id % 2 !== 0 ? "dark:text-gray-400" : "dark:text-white"
               }`}
             >
               {format(new Date(item?.created_at), "p")}
               <Check className="!text-sm" />
             </p>
+            <div
+              className={`absolute bottom-0 ${
+                id % 2 === 0 ? "right-[0px]" : "left-[0px]"
+              }`}
+            >
+              <div
+                className={`${
+                  id % 2 !== 0
+                    ? "border-l-[16px] border-t-[16px] border-l-white border-t-transparent dark:border-l-[#212121]"
+                    : "border-r-[16px] border-t-[16px] border-r-[#eeffde] border-t-transparent dark:border-r-[#766ac8]"
+                }`}
+              ></div>
+            </div>
           </div>
         </div>
       ))}
