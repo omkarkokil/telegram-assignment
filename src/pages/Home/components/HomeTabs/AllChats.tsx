@@ -24,7 +24,7 @@ const AllChats = () => {
   return (
     <article className="overflow-y-auto mb-2 h-[85vh]">
       {chats?.data?.data?.map((item: any) => (
-        <div className="p-2">
+        <div key={item.id} className="p-2">
           <Link
             className={`flex items-center gap-2 p-2 rounded-xl justify-between hover:bg-gray-200 dark:hover:bg-neutral-700 cursor-pointer ${
               item.id === Number(id)

@@ -23,6 +23,7 @@ const ChatBox = () => {
     <aside className="w-full h-auto flex flex-col gap-3 items-end justify-end">
       {chats?.data?.map((item: any, id: number) => (
         <div
+          key={id}
           className={`w-full items-end flex ${
             id % 2 !== 0 ? "justify-start" : "justify-end"
           } `}
