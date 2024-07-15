@@ -31,7 +31,11 @@ const AllChats = () => {
                 ? "!bg-blue-500 text-white"
                 : "bg-transparent"
             }`}
-            to={"/chats/" + item.id}
+            to={
+              window.innerWidth < 768
+                ? `/chats-full-view/${item.id}`
+                : `/chats/${item.id}`
+            }
           >
             <div className="w-max">
               <Avatar sx={{ height: 50, width: 50 }} src="" />

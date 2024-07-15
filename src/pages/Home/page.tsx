@@ -5,7 +5,7 @@ import SingleChats from "./singlechat";
 const HomePage = () => {
   return (
     <section className="h-screen fixed bottom-0 top-0 left-0 right-0 w-full flex ">
-      <aside className="w-[25%] h-full border-r">
+      <aside className="w-full lg:w-[25%] h-full border-r">
         {/* App bar & drawer */}
         <nav className=" flex gap-4 items-center p-3 px-4  w-full">
           <div className="flex gap-6 items-center">
@@ -25,7 +25,7 @@ const HomePage = () => {
         {/* Tabs */}
         <TabsComponent />
       </aside>
-      <aside className="w-[75%]">
+      <aside className="lg:w-[75%] hidden lg:block">
         <SingleChats />
       </aside>
     </section>

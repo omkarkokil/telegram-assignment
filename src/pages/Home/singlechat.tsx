@@ -1,4 +1,5 @@
 import {
+  ArrowBack,
   AttachFile,
   MicNone,
   MoreVert,
@@ -6,16 +7,20 @@ import {
   SentimentSatisfiedAlt,
 } from "@mui/icons-material";
 import { Avatar, IconButton } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import ChatBox from "./components/SingleChats/ChatBox";
 
 const SingleChats = () => {
+  const navigate = useNavigate();
   return (
     <section className="flex items-center w-full justify-center background-chat-container">
       {/* Navigation */}
-      <nav className="fixed bg-white w-full top-0 shadow-md py-2 px-8 ">
+      <nav className="fixed bg-white w-full top-0 shadow-md py-2 px-4">
         <div className="flex items-center justify-between w-full ">
-          {/* left side */}
           <div className="flex items-center gap-1 justify-center ">
+            <IconButton onClick={() => navigate(-1)}>
+              <ArrowBack className="text-gray-500 !text-[26px]" />
+            </IconButton>
             <Avatar sx={{ height: 45, width: 45 }} />
             <div className="">
               <h1 className="tracking-tight text-lg !leading-none   font-semibold">

@@ -18,10 +18,9 @@ const ChatBox = () => {
     queryFn: getAllChats,
   });
 
-  console.log(`🚀 ~ chats:`, chats);
   return (
     <aside className="w-full h-auto flex flex-col items-end justify-end">
-      {chats?.data?.map((item: any) => (
+      {chats?.data?.map((_item: any) => (
         <div className="w-full items-end  flex justify-end">
           <div className="bg-[#eeffde] justify-between items-end flex gap-2 rounded-full p-1 ">
             <h1>hey there</h1>
