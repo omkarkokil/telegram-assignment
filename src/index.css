@@ -54,7 +54,12 @@
   position: relative;
   height: 100vh;
   backdrop-filter: blur(10px);
-  background: linear-gradient(135deg, #ced8b5 20%, #73a98a 40%, #ced58d);
+  background: linear-gradient(
+    135deg,
+    #d1e898bb 5%,
+    #73a98ab9 50%,
+    #d2e14da9 100%
+  );
 }
 
 .background-chat-container::before {
@@ -64,7 +69,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url(./assets/pattern-5.svg) repeat center/contain;
+  background: linear-gradient(
+      135deg,
+      #ced8b5a2 15%,
+      #73a98ac9 90%,
+      #d5e16ba9 100%
+    ),
+    url(./assets/pattern-5.svg) repeat center/contain;
   opacity: 0.2; /* Adjust the opacity as needed */
   z-index: -1;
 }
